@@ -66,3 +66,30 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+Decisiones de arquitectura:
+
+Tomando como referencia este post (https://www.sitepoint.com/react-architecture-best-practices/) para comenzar a tomar algunas decisiones de arquitectura, estan las siguientes
+
+1.- Usar styled components para el estilo
+2.- Cada componente tendrá su directorio y tanto tests como estilo y funcionalidad estaran dentro de ese directorio en el contexto del componente
+3.- tener un archivo Chetos.jsx para tener componentes pequeños que sean styled components (cheto por que justo cuando estaba pensando en que nombre ponerle a ese archivo tenia a cheto mi gato acostado en mis piernas)
+
+la estructura de los componentes seria algo asi: 
+
+components
+    └── Grid
+        ├── __tests__
+        │   └── Grid-test.js
+        ├── Chetos.jsx
+        ├── Grid.jsx
+        ├── Grid.scss
+        └── package.json
+
+
+Inspiración:
+
+La idea de hacer una aplicación para personas discapacitadas que no puedan moverse ni hablar pero que necesiten comunicarse
+
+video de app que usaba stephen hawking: https://www.youtube.com/watch?v=uQ-sQ6EAeO8
